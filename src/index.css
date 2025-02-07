@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "proxima-nova", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 200;
+}
+
+header ul li svg {
+  transform: translateY(5px);
+}
+
+header h1 span {
+  font-weight: 800;
+}
+
+header ul {
+  list-style: none;
+  width: fit-content;
+  gap: 20px;
+  flex: 1;
+  display: block;
+  margin-left: auto;
+  text-align: right;
+}
+
+header li {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+header li:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 200px;
+  border-radius: 5px;
+  text-align: left;
+  animation: ease 0.3s;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+header button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+header button:hover {
+  background-color: #0056b3;
+}
+
+.home {
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.blogs {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.blogPage {
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  margin: 30px;
+  transition: ease 0.2s;
+  width: fit-content;
+  border-radius: 5px;  
+}
+
+.blogPage:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.blogPage img {
+  margin: 10px;
+  width: 20vw;
+  max-height: 25vh;
+  border-radius: 5px;
+}
+
+.blogPage h1 {
+  margin: 5px 10px;
+  font-size: 1.4em;
+}
+
+.blogPage p {
+  margin: 5px 13px;
+  font-size: 0.7em;
+}
+
+.heading {
+  width: 85vw;
+  background: url(bg.png);
+  color: white;
+  display: block;
+  margin: 30px auto;
+  border-radius: 50px;
+}
+
+.heading div h1 {
+  font-family: 'proxima-nova', sans-serif;
+  padding: 4vw;
+  font-size: 4em;
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.heading div {
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.form {
+  max-width: 600px;
+  margin: 120px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputs input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.inputs input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.style-btn{
+  margin-right: 20px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  transition: ease 0.2s;
+  cursor: pointer;
+  background-color: #007bff ;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+}
+
+.style-btn:hover{
+  scale: 1.2;
+  background-color: #0056b3;
+}
+
+.editor {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 200px;
+  background-color: #fff;
+}
+
+.publish {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.publish button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.publish button:hover {
+  background-color: #0056b3;
+}
+
+.category {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.not-found h1 {
+  font-size: 6em;
+  margin: 0;
+}
+
+.not-found h2 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.not-found p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.home-link {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.home-link:hover {
+  background-color: #0056b3;
+}
+
+.about-us {
+  padding: 20px;
+  text-align: center;
+}
+
+.about-us h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 1.2em;
+}
+
+.team {
+  padding: 20px;
+  text-align: center;
+}
+
+.team h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.team p {
+  font-size: 1.2em;
+}
+
+.history {
+  padding: 20px;
+  text-align: center;
+}
+
+.history h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.history p {
+  font-size: 1.2em;
+}
+
+.children {
+  padding: 20px;
+  text-align: center;
+}
+
+.children h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.children p {
+  font-size: 1.2em;
+}
+
+.youth {
+  padding: 20px;
+  text-align: center;
+}
+
+.youth h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.youth p {
+  font-size: 1.2em;
+}
+
+.adults {
+  padding: 20px;
+  text-align: center;
+}
+
+.adults h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.adults p {
+  font-size: 1.2em;
+}
+
+.join {
+  padding: 20px;
+  text-align: center;
+}
+
+.join h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.join p {
+  font-size: 1.2em;
+}
+
+.volunteer {
+  padding: 20px;
+  text-align: center;
+}
+
+.volunteer h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.volunteer p {
+  font-size: 1.2em;
+}
+
+.donate {
+  padding: 20px;
+  text-align: center;
+}
+
+.donate h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.donate p {
+  font-size: 1.2em;
+}
+
+.one-time-donation {
+  padding: 20px;
+  text-align: center;
+}
+
+.one-time-donation h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.one-time-donation p {
+  font-size: 1.2em;
+}
+
+.monthly-donation {
+  padding: 20px;
+  text-align: center;
+}
+
+.monthly-donation h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.monthly-donation p {
+  font-size: 1.2em;
+}
+
+.sponsor {
+  padding: 20px;
+  text-align: center;
+}
+
+.sponsor h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.sponsor p {
+  font-size: 1.2em;
+}
+
+.volunteer ul,
+.team ul,
+.sponsor ul,
+.one-time-donation ul,
+.monthly-donation ul,
+.history ul,
+.donate ul,
+.children ul,
+.about-us ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.volunteer ul li,
+.team ul li,
+.sponsor ul li,
+.one-time-donation ul li,
+.monthly-donation ul li,
+.history ul li,
+.donate ul li,
+.children ul li,
+.about-us ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.volunteer ul li::marker,
+.team ul li::marker,
+.sponsor ul li::marker,
+.one-time-donation ul li::marker,
+.monthly-donation ul li::marker,
+.history ul li::marker,
+.donate ul li::marker,
+.children ul li::marker,
+.about-us ul li::marker {
+  color: #007bff;
+}
+
+.about-us h2 {
+  font-size: 2em;
+  margin-top: 30px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  header li {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .dropdown-content a {
+    padding: 10px 0;
+  }
+
+  .not-found h1 {
+    font-size: 4em;
+  }
+
+  .not-found h2 {
+    font-size: 1.5em;
+  }
+
+  .not-found p {
+    font-size: 1em;
+  }
+
+  .home-link {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blogPage img {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  header ul {
+    gap: 10px;
+  }
+
+  header li {
+    margin-bottom: 5px;
+  }
+
+  .home-link {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .not-found h1 {
+    font-size: 3em;
+  }
+
+  .not-found h2 {
+    font-size: 1.2em;
+  }
+
+  .not-found p {
+    font-size: 0.9em;
+  }
+
+  .home-link {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .blogs {
+    grid-template-columns: 1fr;
+  }
+
+  .blogPage img {
+    width: 80vw;
+  }
+}
