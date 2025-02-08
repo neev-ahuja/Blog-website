@@ -23,8 +23,7 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/neev-ahuja/Blog-website.git
    cd blog-website
-Here’s a clean and professional README.md template for your ReactJS To-Do List project:  
-
+   ```
 2. **Install dependencies**  
    Make sure you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) installed, then run:  
    ```bash
