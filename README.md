@@ -37,7 +37,8 @@ Here’s a clean and professional README.md template for your ReactJS To-Do List
    ```
    The app will be available at `http://localhost:3000`.
 
-4. **Start the backend server**  
+4. **Start the backend server**
+   Make sure you have [MongoDB](https://www.mongodb.com/try/download/community) installed :
    ```bash
    cd blog-backend
    npm start
