@@ -1,6 +1,6 @@
 # 📝 React Blog Website
 
-A simple and efficient **Blog Website** application built using **ReactJS** . Website uses MonogDB for better and efficient DataBase Management.
+A simple and efficient **Blog Website** application built using **ReactJS** . Website uses MongoDB for better and efficient DataBase Management.
 
 ## ✨ Features
 
