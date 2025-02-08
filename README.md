@@ -74,7 +74,7 @@ Here’s a clean and professional README.md template for your ReactJS To-Do List
 |       ├── Donate.js
 |       ├── Header.js
 |       ├── Heading.js
-|       ├──History.js
+|       ├── History.js
 |       ├── Home.js
 |       ├── Join.js
 |       ├── MonthlyDonation.js
